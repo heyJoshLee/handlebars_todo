@@ -9,7 +9,28 @@
   </head>
   <body>
     <main>
+      <section id="video_container">
+      </section>
+      <section>
+        <form action="#" method="post">
+          <h3>Add comment</h3>
+          <textarea></textarea>
+          Name
+          <input type="submit" id="name_form">
+          Comment
+          <input type="submit" id="comment_form">
+        </form>
+      </section>
       
+      <a href="#" id="previous_button">Previous</a>
+      <a href="#" id="next_button">Next</a>
     </main>
+
+
+
+    <script id="video_t" type="text/x-handlebars-template">
+      <h2>{{title}}</h2>
+      <iframe id="video_container" width="560" height="315" src="{{source}}" frameborder="0" allowfullscreen></iframe>
+    </script>
   </body>
 </html>
