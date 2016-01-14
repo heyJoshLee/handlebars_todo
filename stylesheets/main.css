@@ -1,1 +1,97 @@
 @import url("normalize.css");
+
+#video_container {
+  position: relative;
+  text-align: center;
+}
+
+body {
+  background: #EEEEEE;
+}
+
+#comments_container {
+  padding: 30px;
+}
+
+.comment_body {
+  margin-left: 40px;
+  font-weight: 100;
+}
+
+ul {
+  list-style-type: none;
+}
+
+li {
+  padding: 15px;
+}
+
+li + li {
+  border-top: 1px solid black;
+}
+
+form {
+  width: 400px;
+  margin: 0 auto;
+}
+
+input[type="text"] {
+  width: 300px;
+  height: 40px;
+  font-size: 24px;
+}
+
+textarea {
+  width: 300px;
+  height: 200px;
+}
+
+input[type="submit"] {
+  border: none;
+  padding: 20px;
+  text-align: center;
+  display: block;
+  margin: 20px auto;
+  color: white;
+  font-size: 24px;
+  border-radius: 10px;
+  background: rgba(100, 100, 240, 1);
+}
+
+
+dt {
+  margin: 25px 0;
+}
+
+.buttons {
+  text-align: center;
+  font-size: 24px;
+}
+
+.buttons a {
+  padding: 5px;
+  text-decoration: none;
+}
+
+.buttons a:hover {
+  cursor: pointer;
+}
+
+.buttons a:visited {
+  color: inherit;
+}
+
+#add_video {
+  float: right;
+  background: green;
+  padding: 5px;
+}
+
+#add_video:after {
+  content: "";
+  clear: both;
+}
+
+#video_form {
+  display: none;
+}

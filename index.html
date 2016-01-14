@@ -2,6 +2,19 @@
 <html>
   <head>
     <title>Todos</title>
+    <form id="video_form" method="#" action="post">
+      <fieldset>
+        <dl>
+          <input id="add_video" type="submit">Add Video</input>
+          
+          <dt><label for="video_title">Video Title</label></dt>
+          <dd><input id="video_title" type="text" /></dd>
+
+          <dt><label for="video_url">Video URL</label></dt>
+          <dd><input id="video_url" type="text" /></dd>
+        </dl>
+      </fieldset>
+    </form>
     <link rel="stylesheet" type="text/css" href="stylesheets/main.css">
     <script src="javascripts/handlebars-v4.0.5.js"></script>
     <script src="javascripts/jquery-1.11.2.min.js"></script>
@@ -11,19 +24,18 @@
     <main>
       <section id="video_container">
       </section>
-      <section>
-        <form action="#" method="post">
-          <h3>Add comment</h3>
-          <textarea></textarea>
-          Name
-          <input type="submit" id="name_form">
-          Comment
-          <input type="submit" id="comment_form">
-        </form>
+      <div class="buttons">
+        <a href="#" id="previous_button">Previous</a>
+        <a href="#" id="next_button">Next</a>
+      </div>
+      <section id="comments_container">
+
+        asdaspdoasj
+      </section>
+      <section id="form_container"> 
       </section>
       
-      <a href="#" id="previous_button">Previous</a>
-      <a href="#" id="next_button">Next</a>
+      
     </main>
 
 
@@ -31,6 +43,39 @@
     <script id="video_t" type="text/x-handlebars-template">
       <h2>{{title}}</h2>
       <iframe id="video_container" width="560" height="315" src="{{source}}" frameborder="0" allowfullscreen></iframe>
+      <br />
+      
+    </script>
+
+    <script id="form_t" type="text/x-handlebars-template">
+    <form action="#" method="post">
+          <h3>Add comment</h3>
+          <fieldset>
+            <dl>
+              <input id="id_form" value="{{video_id}}" hidden >
+              <dt><label for="user_form">Name</dt>
+              <dd><input id="user_form" type="text"</dd>
+              <dt><label for="comment_box">Comment</label></dt>
+              <dd><textarea id="comment_box"></textarea></dd>
+              <input type="submit" id="comment_form">
+            <dl>
+          </fieldset>
+        </form>
+    </script>
+
+    <script id="comments_t" type="text/x-handlebars-template">
+      <ul>
+        {{#each comments}}
+        {{> comment}}
+        {{/each}}
+      </ul>
+    </script>
+
+    <script id="comment_p" type="text/x-handlebars-partial">
+      <li>
+        <h3>{{user}} says:<h3>
+        <p class="comment_body"> {{body}} </p>
+      </li>
     </script>
   </body>
 </html>
